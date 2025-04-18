@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+}
+
+.birthday-card {
+    text-align: center;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.birthday-card h1 {
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.birthday-card p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.balloons {
+    font-size: 2rem;
+    animation: float 3s infinite ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55b50;
+}
+
+/* Animation for balloons */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation for card fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* تنسيق حقوق الطبع والنشر */
+footer.copyright {
+    position: fixed; /* تثبيت العنصر في مكان محدد */
+    bottom: 0; /* جعله في أسفل الصفحة */
+    width: 100%; /* جعله يمتد على عرض الصفحة بالكامل */
+    text-align: center; /* محاذاة النص في المنتصف */
+    padding: 1em; /* استخدام وحدات مرنة للمسافة الداخلية */
+    background-color: #f0f0f0; /* لون خلفية خفيف */
+    font-size: 0.9rem; /* حجم خط مرن */
+    color: #555; /* لون النص */
+    border-top: 1px solid #ddd; /* خط علوي خفيف */
+}
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    footer.copyright {
+        font-size: 0.8rem; /* تصغير حجم الخط قليلاً */
+        padding: 0.8em; /* تقليل المسافة الداخلية */
+    }
+}
+
+@media (max-width: 480px) {
+    footer.copyright {
+        font-size: 0.7rem; /* تصغير حجم الخط أكثر */
+        padding: 0.6em; /* تقليل المسافة الداخلية أكثر */
+    }
+}
